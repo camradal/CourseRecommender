@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Courses</title>
+</head>
+<body>
+	<h1>Courses</h1>
+	<b>List of courses:</b>
+	<ul>
+		#for $course_id in $course_ids
+		<li><a href="/Course/$course_id">$course_id</a></li>
+		#end for
+	</ul>
+</body>
+</html>

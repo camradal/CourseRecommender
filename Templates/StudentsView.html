@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Students</title>
+</head>
+<body>
+	<h1>Students</h1>
+    <table width="100%" cellpadding="5" cellspacing="5" border="0">
+        <tr valign="top">
+            <td>
+                <b>List of students:</b>
+                <ul>
+                	#for $student_id in $student_ids
+                	<li><a href="/Student/$student_id">$student_id</a></li>
+                    #end for
+                </ul>
+            </td>
+            <td>
+                <b>Statistics:</b>
+                <ul>
+                    <li>Average number of corses: $avg_courses</li>
+                    <li>Average number of horts: $avg_horts</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

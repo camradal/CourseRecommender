@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Student $student.student_id</title>
+</head>
+<body>
+	<h1>Student $student.student_id</h1>
+    <table width="100%" cellpadding="5" cellspacing="5" border="0">
+        <tr valign="top">
+            <td>
+                <b>Number of classes taken: </b>#echo len($student.courses) #<br/>
+                <b>List of classes taken:</b>
+                <ul>
+                    #for $course in $student.courses
+                    <li><a href="/Course/$course">$course</a></li>
+                    #end for
+                </ul>
+            </td>
+            <td>
+                <b>Number of horts: </b>#echo len($student.horts) #<br/>
+                <b>List of horts:</b>
+                <ul>
+                    #for $hort, $hort_val in $student.horts.iteritems()
+                    <li><a href="/Student/$hort">$hort</a> ($hort_val)</li>
+                    #end for
+                </ul>
+            </td>
+            <td>
+                <b>Number of predicted courses: </b>#echo len($predicted_courses) #<br/>
+                <b>Predicted courses:</b>
+                <ul>
+                    #for $course in $predicted_courses
+                    <li><a href="/Student/$student.student_id/$course[0]">$course[0]</a> ($course[1])</li>
+                    #end for
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
